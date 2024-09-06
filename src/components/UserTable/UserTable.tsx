@@ -21,7 +21,7 @@ interface UserTableProps {
   columns?: ColumnDef<User>[];
   onRowClick?: (user: User) => void;
 }
-
+import s from './UserTable.module.scss'
 
 
 export const UserTable: React.FC<UserTableProps> = memo(({ users, columns: customColumns, onRowClick }) => {
@@ -59,8 +59,8 @@ export const UserTable: React.FC<UserTableProps> = memo(({ users, columns: custo
   });
 
   return (
-    <table>
-      <thead>
+    <table className={s.table}>
+      <thead className={s.thead}>
         {table.getHeaderGroups().map((headerGroup) => (
           <tr key={headerGroup.id}>
             {headerGroup.headers.map((header) => (
@@ -69,7 +69,7 @@ export const UserTable: React.FC<UserTableProps> = memo(({ users, columns: custo
           </tr>
         ))}
       </thead>
-      <tbody>
+      <tbody className={s.tbody}>
         {table.getRowModel().rows.map((row) => (
           <tr
             key={row.id}

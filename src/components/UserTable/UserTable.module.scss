@@ -1,4 +1,4 @@
-table {
+.table {
   width: 100%;
   border-collapse: collapse;
   font-family: Arial, sans-serif;
@@ -6,9 +6,10 @@ table {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
-thead {
+.thead {
   background-color: #f2f2f2;
   border-bottom: 2px solid #ddd;
 
@@ -42,7 +43,7 @@ thead {
   }
 }
 
-tbody {
+.tbody {
   tr {
     &:nth-child(even) {
       background-color: #f9f9f9;
@@ -60,7 +61,7 @@ tbody {
   }
 }
 
-tfoot {
+.tfoot {
   background-color: #f2f2f2;
   border-top: 2px solid #ddd;
 
